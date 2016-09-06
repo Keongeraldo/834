@@ -3,4 +3,83 @@ font-family: 'Overlock SC', cursive;*/
 
 body {
 	font-family: 'Overlock', cursive;
+    font-size: 14pt;
+}
+
+.logo .navbar-brand {
+	display: inline-block;
+}
+
+.logo .navbar-brand img{
+	max-width: 100%;
+	border-radius: 4px;
+	height: 100%;
+	transition: transform 300ms ease-in-out 50ms;
+}
+
+.logo .navbar-brand img:hover{
+	height: 400%;
+	box-shadow: 0px 0px 5px 1px;
+}
+
+.logo a:visited{
+
+}
+
+.subject-intro h3{
+	text-decoration: underline;
+	text-align: center;
+}
+
+.subject-tiles a.thumbnail {
+	text-decoration: none;
+	cursor: default;
+}
+
+.thumbnail h2 {
+    background: linear-gradient(rgba(113,255,0,0.05), rgba(0, 0, 255, 0.02));
+    border-radius: 8px;
+    padding: 10px 0;
+}
+
+.subject-tiles a.thumbnail img{
+	display: none;
+}
+
+* { box-sizing: border-box; }
+
+/* ---- grid ---- */
+
+.grid {
+  /* center */
+  margin: 5% auto;
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- grid-item ---- */
+
+.grid-item {
+    width: 275px;
+    /* height: 120px; */
+    float: left;
+    /* background: #D26; */
+    /* border: 2px solid #333; */
+    /* border-color: hsla(0, 0%, 0%, 0.5); */
+    /* border-radius: 5px; */
+}
+
+footer p.proudly{
+	text-align: center;
+}
+
+footer.stay-bottom {
+    margin-top: 20px;
+    padding-top: 5px;
+    background: rgba(236, 236, 236, 0.34);
 }
