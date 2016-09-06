@@ -4,6 +4,8 @@ font-family: 'Overlock SC', cursive;*/
 body {
 	font-family: 'Overlock', cursive;
     font-size: 14pt;
+    color: #00183e;
+    background-color: rgba(248, 248, 248, 0.2);
 }
 
 .logo .navbar-brand {
@@ -31,20 +33,33 @@ body {
 	text-align: center;
 }
 
-.subject-tiles a.thumbnail {
+.subject-tiles div.thumbnail {
+	color: #032861;
+}
+
+.subject-tiles div.thumbnail:hover {
+	color: #04419e;
+}
+
+div .thumbnail a.to-github{
 	text-decoration: none;
-	cursor: default;
+	color: white;
+}
+
+div .thumbnail a.to-github:hover{
+	text-decoration: underline;
 }
 
 .thumbnail h2 {
-    background: linear-gradient(rgba(113,255,0,0.05), rgba(0, 0, 255, 0.02));
+    background: linear-gradient(rgba(0,188,212,0.08), rgba(91, 192, 222, 0.08));
     border-radius: 8px;
     padding: 10px 0;
 }
 
-.subject-tiles a.thumbnail img{
+.subject-tiles div.thumbnail img{
 	display: none;
 }
+
 
 * { box-sizing: border-box; }
 
