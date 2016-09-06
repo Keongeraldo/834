@@ -28,6 +28,13 @@ body {
 
 }
 
+.intro-questions h4{
+  color: #03337b;
+  font-size: 15pt;
+  margin-top: 21px;
+
+}
+
 .subject-intro h3{
 	text-decoration: underline;
 	text-align: center;
@@ -87,6 +94,18 @@ div .thumbnail a.to-github:hover{
     /* border: 2px solid #333; */
     /* border-color: hsla(0, 0%, 0%, 0.5); */
     /* border-radius: 5px; */
+}
+
+
+
+.row.todays-classes {
+    background: #93e7ff;
+    border-radius: 4px;
+    margin-bottom: 2px;
+}
+
+span#day {
+    text-decoration: underline;
 }
 
 p.issue {
