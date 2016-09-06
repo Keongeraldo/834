@@ -89,6 +89,20 @@ div .thumbnail a.to-github:hover{
     /* border-radius: 5px; */
 }
 
+p.issue {
+  background-color: #d5f4fd;
+  text-align: center;
+}
+
+p.issue a {
+    color: #0ba2ea;
+}
+
+p.issue a:hover{
+  color: blue;
+}
+
+
 footer p.proudly{
 	text-align: center;
 }
