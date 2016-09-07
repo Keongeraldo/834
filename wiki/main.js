@@ -82,9 +82,12 @@ $(document).ready(function(){
     for (var i = 0; i < TodaysSubjects.length; i++) {
       items.push(
         "<li class='somo-la-leo'>"+
-          " Subject: " + TodaysSubjects[i][0] + ", " +
-          " Teacher: " + TodaysSubjects[i][1] + ", " +
-          " Where: " + TodaysSubjects[i][2] + "." +
+          // " Subject: " + TodaysSubjects[i][0] + ", " +
+          "<p class='kuhusu-somo'>" + " Предмет: "+"<span class='bolder'>" + TodaysSubjects[i][0] +"</span>" + ", " + "</p>" + 
+          // " Teacher: " + TodaysSubjects[i][1] + ", " +
+          "<p class='kuhusu-somo'>" + " Преподаватель: "+"<span class='bolder'>" + TodaysSubjects[i][1] +"</span>" + ", " + "</p>" +
+          // " Where: " + TodaysSubjects[i][2] + "." +
+          "<p class='kuhusu-somo'>" + " Аудитория: "+"<span class='bolder'>" + TodaysSubjects[i][2] +"</span>" + ", " + "</p>" +
         "</li>"
         );
       // console.log(" Subject: " + TodaysSubjects[i][0] );

@@ -99,6 +99,7 @@ div .thumbnail a.to-github:hover{
 
 
 .row.todays-classes {
+    margin: 0 auto;
     background: #93e7ff;
     border-radius: 4px;
     margin-bottom: 6px;
@@ -107,6 +108,12 @@ div .thumbnail a.to-github:hover{
 
 span#day {
     text-decoration: underline;
+}
+
+@media screen and (max-width: 450px){
+  span#day{
+    display: block;
+  }
 }
 
 li.somo-la-leo {
@@ -123,6 +130,19 @@ li.somo-la-leo {
 li.somo-la-leo:hover {
     background: rgba(75, 212, 251, 0.56);
     box-shadow: aquamarine 1px 1px 4px 0.5px;
+}
+
+p.kuhusu-somo {
+    display: inline-block;
+    word-spacing: 2pt;
+    margin: 0 10px;
+}
+
+p.kuhusu-somo span.bolder {
+    color: black;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 16pt;
 }
 
 p.issue {
