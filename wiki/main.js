@@ -45,23 +45,68 @@ monthName[9] = "October";
 monthName[10] = "November";
 monthName[11] = "December";
 
+    // COMMENTS TO LATER DELETE
+    // console.log(d.getWeek());
 
-console.log(d.getWeek());
-
-console.log( "Today is " + weekday[d.getDay()]);
+    // console.log( "Today is " + weekday[d.getDay()]);
 
 
 
 $('.todays-classes h3 #day').text(weekday[d.getDay()] + ', ' + monthName[d.getMonth()] + ' ' + d.getDate());
 
 
-$('#todays-subjects').append().html(
-	'<li> something </li>'
+$(document).ready(function(){
+
+  $.getJSON( "UniSem07Timetable.json", function( data ) {
+    var items = [];
+    var weekNumber;
+
+    if (d.getWeek()%2 == 0){
+      weekNumber = "SecondWeek";
+    }else if (d.getWeek()%2 == 1){
+      weekNumber = "FirstWeek";
+    }
 
 
-	// WRITE A SCRIPT TO TAKE DATA FROM THE JSON AND DISPLAY THEM HERE.
+
+    // COMMENTS TO LATER DELETE
+
+    // console.log("Today is a day in the " + weekNumber );
+    // var mabina;
+    // mabina = data;
+
+    // console.log(mabina[weekNumber]);
+
+    TodaysSubjects = data[weekNumber][weekday[d.getDay()]];
+
+    for (var i = 0; i < TodaysSubjects.length; i++) {
+      items.push(
+        "<li class='somo-la-leo'>"+
+          " Subject: " + TodaysSubjects[i][0] + ", " +
+          " Teacher: " + TodaysSubjects[i][1] + ", " +
+          " Where: " + TodaysSubjects[i][2] + "." +
+        "</li>"
+        );
+      // console.log(" Subject: " + TodaysSubjects[i][0] );
+      // console.log(" Teacher: " + TodaysSubjects[i][1] );
+      // console.log(" Where: " + TodaysSubjects[i][2] );
+    }
+
+    // COMMENTS TO LATER DELETE
+    // data[weekNumber][weekday[d.getDay()]][0], function( val ) {
+    //   // items.push( "<li id='" + key + "'>" + val + "</li>" );
+    //   console.log(val);
+    //   items.push("<li> " + val[0] + " </li>");
+    // }
+   
+    $( "<ol/>", {
+      "class": "todays-subjects",
+      html: items.join( "" )
+    }).appendTo( "div.todays-classes div" );
 
 
+  });
 
 
-	);
+});
+

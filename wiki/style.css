@@ -101,11 +101,28 @@ div .thumbnail a.to-github:hover{
 .row.todays-classes {
     background: #93e7ff;
     border-radius: 4px;
-    margin-bottom: 2px;
+    margin-bottom: 6px;
+    box-shadow: #38b9de 1px 1px 6px 2px;
 }
 
 span#day {
     text-decoration: underline;
+}
+
+li.somo-la-leo {
+    display: list-item;
+    border: solid 1px aquamarine;
+    border-radius: 3px;
+    margin: 10px;
+    padding: 4px;
+    background: rgba(81, 215, 253, 0.56);
+    box-shadow: rgba(0, 0, 0, 0.44) 1px 1px 5px 0.5px;
+    transition: box-shadow 340ms ease-in-out 10ms;
+}
+
+li.somo-la-leo:hover {
+    background: rgba(75, 212, 251, 0.56);
+    box-shadow: aquamarine 1px 1px 4px 0.5px;
 }
 
 p.issue {

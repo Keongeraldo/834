@@ -1,6 +1,6 @@
 {
-	"descrription": "The full timetable of our group",
-	"First Week": {
+	"description": "The full timetable of our group",
+	"FirstWeek": {
 		"Monday": [
 			["Бжд", "Касенко", "201"],
 			["Конструкция", "Королев", "МИС"],
@@ -33,7 +33,7 @@
 		]
 	},
 
-	"Second Week": {
+	"SecondWeek": {
 		"Monday": [
 			["Конструкция", "Королев", "МИС"],
 			["Конструкция", "Королев", "МИС"],
