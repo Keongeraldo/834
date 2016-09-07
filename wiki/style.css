@@ -139,10 +139,14 @@ p.kuhusu-somo {
 }
 
 p.kuhusu-somo span.bolder {
-    color: black;
+    color: #271b3e;
     font-style: italic;
     font-weight: 600;
     font-size: 16pt;
+}
+
+p.kuhusu-somo span.bolder.mwalimu {
+    color: #2e5456;
 }
 
 p.issue {
