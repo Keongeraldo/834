@@ -120,12 +120,24 @@ p.kuhusu-somo span.bolder.mwalimu {
     color: #2e5456;
 }
 
+.put-center {
+  text-align: center;s
+}
+
 a.go-to-full-timetable {
-    display: block;
-    width: 100%;
+    padding: 10px 10px;
+    border-radius: 5px;
+    margin: 5px 0px;
+    display: inline-block;
     text-decoration: none;
     text-align: center;
     padding-top: 10px;
+    transition: all 330ms ease-in-out 10ms;s
+}
+
+a.go-to-full-timetable:hover {
+  background: #7FDBFF;
+  box-shadow: 1px 1px 0px #b2e9ff, 2px 2px 0px #b2e9ff, 3px 3px 0px #b2e9ff, 4px 4px 0px #e5f8ff, 5px 5px 0px white, 6px 6px 0px white, 7px 7px 0px white;
 }
 
 p.issue {
