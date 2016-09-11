@@ -73,6 +73,10 @@ div#timetable-app {
     box-shadow: #38b9de 1px 1px 6px 2px;
 }
 
+.row.todays-classes:nth-last-child(1){
+  margin-left: 20px;
+}
+
 span#day {
     text-decoration: underline;
 }

@@ -92,7 +92,7 @@ $(document).ready(function(){
           //Append the html and class details for similar stylings like in the wiki
           $('#timetable-app').append('<div class="row todays-classes"><div class="col-md-10 col-md-offset-1">' +
                     '<h3>This is a <span class="day"></span></h3>' +
-                    '<h4>Today'+ "'" + 's classes are: </h4>' +
+                    '<h4>This day'+ "'" + 's classes are: </h4>' +
 
                   '</div> </div>');
         
