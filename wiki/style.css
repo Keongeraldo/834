@@ -152,6 +152,14 @@ p.kuhusu-somo span.bolder.mwalimu {
     color: #2e5456;
 }
 
+a.go-to-full-timetable {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 10px;
+}
+
 p.issue {
   background-color: #d5f4fd;
   text-align: center;
