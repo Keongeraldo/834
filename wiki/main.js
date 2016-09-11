@@ -1,6 +1,6 @@
 $('.grid').masonry({
   itemSelector: '.grid-item',
-  columnWidth: 275,
+  columnWidth: 300,
   stagger: 30,
   gutter: 8,
   isFitWidth: true
