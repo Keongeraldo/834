@@ -1,4 +1,4 @@
-## So this is the list of classes done so far:
+## Занятия коьорые были:
 >
 * [Class 001]() Sept , 2016
 * [Class 002]() Sept , 2016
