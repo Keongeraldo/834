@@ -96,13 +96,16 @@ div .thumbnail a.to-github:hover{
     /* border-radius: 5px; */
 }
 
-
-
+.week-highlights {
+    /* box-sizing: border-box; */
+    color: rgba(0,24,116,0.08);
+    padding: 0em 1em 1.5em;
+}
 .row.todays-classes {
     margin: 0 auto;
     background: #93e7ff;
     border-radius: 4px;
-    margin-bottom: 6px;
+    margin-bottom: 1.75%;
     box-shadow: #38b9de 1px 1px 6px 2px;
 }
 
