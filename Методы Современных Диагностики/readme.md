@@ -1,5 +1,5 @@
 ## So this is the list of classes done so far:
-
-* [Class 001]() Sept 1, 2016
-* [Class 002]() Sept 2, 2016
-* [Class 003]() Sept 8, 2016
+>
+* [Class 001](https://github.com/Gideonamani/834/blob/gh-pages/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4%D1%8B%20%D0%A1%D0%BE%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D1%85%20%D0%94%D0%B8%D0%B0%D0%B3%D0%BD%D0%BE%D1%81%D1%82%D0%B8%D0%BA%D0%B8/Class%20001.md) Sept 1, 2016
+* [Class 002](https://github.com/Gideonamani/834/blob/gh-pages/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4%D1%8B%20%D0%A1%D0%BE%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D1%85%20%D0%94%D0%B8%D0%B0%D0%B3%D0%BD%D0%BE%D1%81%D1%82%D0%B8%D0%BA%D0%B8/Class%20002.md) Sept 2, 2016
+* [Class 003](https://github.com/Gideonamani/834/blob/gh-pages/%D0%9C%D0%B5%D1%82%D0%BE%D0%B4%D1%8B%20%D0%A1%D0%BE%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D1%85%20%D0%94%D0%B8%D0%B0%D0%B3%D0%BD%D0%BE%D1%81%D1%82%D0%B8%D0%BA%D0%B8/Class%20003.md) Sept 8, 2016
