@@ -1,6 +1,6 @@
 ## Занятия коьорые были:
 >
-* [Class 001]() Sept , 2016
-* [Class 002]() Sept , 2016
-* [Class 003]() Sept , 2016
+* [Class 001](https://github.com/Gideonamani/834/blob/gh-pages/%D0%A4%D0%B8%D0%B7/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%20001.md) Sept 7, 2016
+* [Class 002](https://github.com/Gideonamani/834/blob/gh-pages/%D0%A4%D0%B8%D0%B7/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%20001.md) Sept 14, 2016
+* [Class 003](https://github.com/Gideonamani/834/blob/gh-pages/%D0%A4%D0%B8%D0%B7/%D0%97%D0%B0%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%20001.md) Sept 21, 2016
 
