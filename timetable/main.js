@@ -19,7 +19,8 @@ Date.prototype.getWeek = function () {
     return 1 + Math.ceil((firstThursday - target) / 604800000);
 }
 
-var d= new Date();
+
+var d = new Date();
 
 var weekday = new Array(7);
 weekday[0]=  "Sunday";
@@ -45,19 +46,8 @@ monthName[9] = "October";
 monthName[10] = "November";
 monthName[11] = "December";
 
-    // COMMENTS TO LATER DELETE
-    // console.log(d.getWeek());
-
-    // console.log( "Today is " + weekday[d.getDay()]);
-
-
-
-
 
 $(document).ready(function(){
-
-
-
   //Populate the classes fields
   $.getJSON( "UniSem07Timetable.json", function( data ) {
     var items = [];
@@ -70,47 +60,106 @@ $(document).ready(function(){
     }
 
 
-    for (var dayOfTheWeek = 1; dayOfTheWeek < 6; dayOfTheWeek++) {
+    for (var dayOfTheWeek = 1; dayOfTheWeek < 7; dayOfTheWeek++) {
 
-      console.log(dayOfTheWeek);
-      TodaysSubjects = data[weekNumber][weekday[dayOfTheWeek]];
-
-      for (var i = 0; i < TodaysSubjects.length; i++) {
-        if(i===0){items[dayOfTheWeek] = [];}
-        items[dayOfTheWeek].push(
-          "<li class='somo-la-leo'>"+
-            // " Subject: " + TodaysSubjects[i][0] + ", " +
-            "<p class='kuhusu-somo'>" + " Предмет: "+"<span class='bolder somo'>" + TodaysSubjects[i][0] +"</span>" + ", " + "</p>" + 
-            // " Teacher: " + TodaysSubjects[i][1] + ", " +
-            "<p class='kuhusu-somo'>" + " Преподаватель: "+"<span class='bolder mwalimu'>" + TodaysSubjects[i][1] +"</span>" + ", " + "</p>" +
-            // " Where: " + TodaysSubjects[i][2] + "." +
-            "<p class='kuhusu-somo'>" + " Аудитория: "+"<span class='bolder darasa'>" + TodaysSubjects[i][2] +"</span>" + "." + "</p>" +
-          "</li>"
-          );
+      function addDoubleDiv () {
+        var theMonday = new Date(d.getTime() - (d.getDay() - 1) * 24 * 60 * 60 * 1000);
+        var currentDate = new Date(theMonday.getTime() + (dayOfTheWeek-1) * 24 * 60 * 60 * 1000);
+        $('#timetable-app').append('<div class="row todays-classes"><div class="col-md-10 col-md-offset-1 todays-classes-2">' +
+                  '<h3>This is a <span class="day">' + weekday[dayOfTheWeek] + '</span>' + ' of the ' + weekNumber + ' </h3>' +
+                  '<h3>' + monthName[currentDate.getMonth()] + ', ' + currentDate.getDate() + '</h3>' +
+                '</div> </div>');
       }
 
+      TodaysSubjects = data[weekNumber][weekday[dayOfTheWeek]];
+
+      if (TodaysSubjects.length > 0) {
+        //if it is not a free day then write out the classes we are having
+        for (var i = 0; i < TodaysSubjects.length; i++) {
+          var Subject = TodaysSubjects[i];
+          var SubjectName = TodaysSubjects[i][0];
+          var SubjectTeacher = TodaysSubjects[i][1];
+          var SubjectClassroom = TodaysSubjects[i][2];
+
+          if (SubjectTeacher == "") {SubjectTeacher = "Нейзвестный";}
+          if (SubjectClassroom == "") {SubjectClassroom = "Нейзвестный";}
+
+          if (!SubjectName == "") { 
+            if(i===0){items[dayOfTheWeek] = [];}       
+            items[dayOfTheWeek].push(
+              "<li class='somo-la-leo'>"+
+                // " Subject: " + TodaysSubjects[i][0] + ", " +
+                "<p class='kuhusu-somo'>" + " Предмет: "+"<span class='bolder somo'>" + SubjectName +"</span>" + ", " + "</p>" + 
+                // " Teacher: " + TodaysSubjects[i][1] + ", " +
+                "<p class='kuhusu-somo'>" + " Преподаватель: "+"<span class='bolder mwalimu'>" + SubjectTeacher +"</span>" + ", " + "</p>" +
+                // " Where: " + TodaysSubjects[i][2] + "." +
+                "<p class='kuhusu-somo'>" + " Аудитория: "+"<span class='bolder darasa'>" + SubjectClassroom +"</span>" + "." + "</p>" +
+              "</li>"
+              ); 
+          }else{ 
+            items[dayOfTheWeek].push("<li class='somo-la-leo free-para'> Free to Party !!! </li>");
+          }        
+        }
+
           //Append the html and class details for similar stylings like in the wiki
-          $('#timetable-app').append('<div class="row todays-classes"><div class="col-md-10 col-md-offset-1">' +
-                    '<h3>This is a <span class="day"></span></h3>' +
-                    '<h4>This day'+ "'" + 's classes are: </h4>' +
+          addDoubleDiv ();
+          $("div.todays-classes div.todays-classes-2:last").append('<h4>This day'+ "'" + 's classes are: </h4>')
 
-                  '</div> </div>');
-        
-          //Write today's full date
-          $('.todays-classes h3 .day:last').text(weekday[dayOfTheWeek] + ' of ' + weekNumber);
+        $( "<ol/>", {
+            "class": "todays-subjects",
+            html: items[dayOfTheWeek].join( "" ),
+          }).appendTo( "div.todays-classes div.todays-classes-2:last" );
+      }
+      else{
+        if(weekday[dayOfTheWeek] == "Saturday"){
+          //if the day is a free one and it is a saturday
+          addDoubleDiv ();
+          $( "<h4/>", {
+              "class": "rest-saturday",
+              text: "Supercool that there are no classes today. Enjoy resposibly."
+            }).appendTo( "div.todays-classes div.todays-classes-2:last" );
+          $('div.row.todays-classes:last').addClass("saturday");
 
+        }
+        // else if(weekday[dayOfTheWeek] == "Sunday"){
+        //   //if the day is a free one and it is a SUNDAY
+        //   addDoubleDiv ();
+        //   $( "<h4/>", {
+        //       "class": "rest-sunday",
+        //       text: "You just need to relax and take it easy."
+        //     }).appendTo( "div.todays-classes div.todays-classes-2:last" );
+        //   $('div .row.todays-classes:last').addClass("sunday");
 
-          //Add the subject and lecture details
-          $( "<ol/>", {
-              "class": "todays-subjects",
-              html: items[dayOfTheWeek].join( "" )
-            }).appendTo( "div.todays-classes div:last" );
-
+        // }
+        else{
+          addDoubleDiv ();
+          $( "<h4/>", {
+            "class": "rest-weekday",
+             text: "Today is a day to sleep."  
+          }).appendTo( "div.todays-classes div.todays-classes-2:last" );
+          $('div .row.todays-classes:last').addClass("freeday");
+        }
+      }
     }
+
+        //special case for sunday
+
+        //FIX BUG
+
+        // var theMonday = new Date(d.getTime() - (d.getDay() - 1) * 24 * 60 * 60 * 1000);
+        // var currentDate = new Date(theMonday.getTime() + (dayOfTheWeek-1) * 24 * 60 * 60 * 1000);
+        $('#timetable-app').append('<div class="row todays-classes"><div class="col-md-10 col-md-offset-1 todays-classes-2">' +
+                  '<h3>This is a <span class="day">' + weekday[0] + '</span>' + ' of the ' + weekNumber + ' </h3>' +
+                  // '<h3>' + monthName[currentDate.getMonth()] + ', ' + currentDate.getDate() + '</h3>' +
+                '</div> </div>');
+        $( "<h4/>", {
+            "class": "rest-sunday",
+            text: "You just need to relax and take it easy."
+          }).appendTo( "div.todays-classes div.todays-classes-2:last" );
+          $('div .row.todays-classes:last').addClass("sunday");
 
 
   });
 
 
 });
-

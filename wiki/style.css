@@ -103,17 +103,37 @@ div .thumbnail a.to-github:hover{
 }
 .row.todays-classes {
     margin: 0 auto;
-    background: #93e7ff;
+    /*background: #93e7ff;*/
+    background: rgba(3, 169, 244, 0.66);
     border-radius: 4px;
     margin-bottom: 1.75%;
     box-shadow: #38b9de 1px 1px 6px 2px;
     padding-bottom: 10px;
 }
-
+.row.todays-classes.sunday {
+    background: rgba(76, 214, 150, 0.9);
+}
+.row.todays-classes.saturday {
+    background: rgb(3, 169, 244);
+}
 span#day {
     text-decoration: underline;
 }
 
+h4.rest-saturday {
+    text-align: center;
+    font-size: 20pt;
+    color: aqua;
+    margin: 50px 0;
+}
+
+h4.rest-sunday {
+    font-size: 20pt;
+    text-align: center;
+    font-weight: 600;
+    color: chartreuse;
+    margin: 50px 0;
+}
 
 li.somo-la-leo {
     display: list-item;
@@ -142,6 +162,12 @@ p.kuhusu-somo span.bolder {
     font-style: italic;
     font-weight: 600;
     font-size: 16pt;
+}
+
+li.somo-la-leo.free-para {
+    text-align: center;
+    color: #FFEB3B;
+    background: lightseagreen;
 }
 
 @media screen and (max-width: 450px){

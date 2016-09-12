@@ -20,6 +20,7 @@ Date.prototype.getWeek = function () {
 }
 
 var d= new Date();
+// var d = new Date(2016, 8, 24, 1, 10);
 
 var weekday = new Array(7);
 weekday[0]=  "Sunday";
@@ -45,12 +46,6 @@ monthName[9] = "October";
 monthName[10] = "November";
 monthName[11] = "December";
 
-    // COMMENTS TO LATER DELETE
-    // console.log(d.getWeek());
-
-    // console.log( "Today is " + weekday[d.getDay()]);
-
-
 
 $('.todays-classes h3 #day').text(weekday[d.getDay()] + ', ' + monthName[d.getMonth()] + ' ' + d.getDate());
 
@@ -68,47 +63,68 @@ $(document).ready(function(){
     }
 
 
-
-    // COMMENTS TO LATER DELETE
-
-    // console.log("Today is a day in the " + weekNumber );
-    // var mabina;
-    // mabina = data;
-
-    // console.log(mabina[weekNumber]);
-
     TodaysSubjects = data[weekNumber][weekday[d.getDay()]];
 
-    for (var i = 0; i < TodaysSubjects.length; i++) {
-      items.push(
-        "<li class='somo-la-leo'>"+
-          // " Subject: " + TodaysSubjects[i][0] + ", " +
-          "<p class='kuhusu-somo'>" + " Предмет: "+"<span class='bolder somo'>" + TodaysSubjects[i][0] +"</span>" + ", " + "</p>" + 
-          // " Teacher: " + TodaysSubjects[i][1] + ", " +
-          "<p class='kuhusu-somo'>" + " Преподаватель: "+"<span class='bolder mwalimu'>" + TodaysSubjects[i][1] +"</span>" + ", " + "</p>" +
-          // " Where: " + TodaysSubjects[i][2] + "." +
-          "<p class='kuhusu-somo'>" + " Аудитория: "+"<span class='bolder darasa'>" + TodaysSubjects[i][2] +"</span>" + "." + "</p>" +
-        "</li>"
-        );
-      // console.log(" Subject: " + TodaysSubjects[i][0] );
-      // console.log(" Teacher: " + TodaysSubjects[i][1] );
-      // console.log(" Where: " + TodaysSubjects[i][2] );
+    if (TodaysSubjects.length > 0) {
+      //if it is not a free day then write out the classes were having
+      for (var i = 0; i < TodaysSubjects.length; i++) {
+        var Subject = TodaysSubjects[i];
+        var SubjectName = TodaysSubjects[i][0];
+        var SubjectTeacher = TodaysSubjects[i][1];
+        var SubjectClassroom = TodaysSubjects[i][2];
+
+        if (SubjectTeacher == "") {SubjectTeacher = "Нейзвестный";}
+        if (SubjectClassroom == "") {SubjectClassroom = "Нейзвестный";}
+
+        if (!SubjectName == "") {        
+          items.push(
+            "<li class='somo-la-leo'>"+
+              // " Subject: " + TodaysSubjects[i][0] + ", " +
+              "<p class='kuhusu-somo'>" + " Предмет: "+"<span class='bolder somo'>" + SubjectName +"</span>" + ", " + "</p>" + 
+              // " Teacher: " + TodaysSubjects[i][1] + ", " +
+              "<p class='kuhusu-somo'>" + " Преподаватель: "+"<span class='bolder mwalimu'>" + SubjectTeacher +"</span>" + ", " + "</p>" +
+              // " Where: " + TodaysSubjects[i][2] + "." +
+              "<p class='kuhusu-somo'>" + " Аудитория: "+"<span class='bolder darasa'>" + SubjectClassroom +"</span>" + "." + "</p>" +
+            "</li>"
+            ); 
+        }else{ 
+          items.push("<li class='somo-la-leo free-para'> Free to Party !!! </li>");
+        }        
+      }
+
+
+      $("div.todays-classes div.todays-classes-2").append("<h4>Today's classes are: </h4>");
+      $( "<ol/>", {
+          "class": "todays-subjects",
+          html: items.join( "" )
+        }).appendTo( "div.todays-classes div.todays-classes-2" );
+    }else{
+      if(weekday[d.getDay()] == "Saturday"){
+        //if the day is a free one and it is a saturday
+        $( "<h4/>", {
+            "class": "rest-saturday",
+            text: "Supercool that there are no classes today. Enjoy resposibly."
+          }).appendTo( "div.todays-classes div.todays-classes-2" );
+        $('div.row.todays-classes').addClass("saturday");
+
+      }
+      else if(weekday[d.getDay()] == "Sunday"){
+        //if the day is a free one and it is a SUNDAY
+        $( "<h4/>", {
+            "class": "rest-sunday",
+            text: "You just need to relax and take it easy."
+          }).appendTo( "div.todays-classes div.todays-classes-2" );
+        $('div .row.todays-classes').addClass("sunday");
+
+      }else{
+        $( "<h4/>", {
+          "class": "rest-weekday",
+           text: "Today is a day to sleep."  
+        }).appendTo( "div.todays-classes div.todays-classes-2" );
+      }
     }
 
-    // COMMENTS TO LATER DELETE
-    // data[weekNumber][weekday[d.getDay()]][0], function( val ) {
-    //   // items.push( "<li id='" + key + "'>" + val + "</li>" );
-    //   console.log(val);
-    //   items.push("<li> " + val[0] + " </li>");
-    // }
-   
-   console.log("run once.")
-
-    $( "<ol/>", {
-        "class": "todays-subjects",
-        html: items.join( "" )
-      }).appendTo( "div.todays-classes div.todays-classes-2" );
-    });
+  });
 
 
 });
