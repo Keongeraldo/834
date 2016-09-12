@@ -114,11 +114,6 @@ span#day {
     text-decoration: underline;
 }
 
-@media screen and (max-width: 450px){
-  span#day{
-    display: block;
-  }
-}
 
 li.somo-la-leo {
     display: list-item;
@@ -147,6 +142,21 @@ p.kuhusu-somo span.bolder {
     font-style: italic;
     font-weight: 600;
     font-size: 16pt;
+}
+
+@media screen and (max-width: 450px){
+  span#day{
+    display: block;
+  }
+
+  li.somo-la-leo {
+    font-size: 10pt;
+  }
+
+  p.kuhusu-somo span.bolder {
+    font-size: 12pt;
+  }
+
 }
 
 p.kuhusu-somo span.bolder.mwalimu {
