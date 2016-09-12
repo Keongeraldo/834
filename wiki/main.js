@@ -102,13 +102,13 @@ $(document).ready(function(){
     //   items.push("<li> " + val[0] + " </li>");
     // }
    
+   console.log("run once.")
+
     $( "<ol/>", {
-      "class": "todays-subjects",
-      html: items.join( "" )
-    }).appendTo( "div.todays-classes div" );
-
-
-  });
+        "class": "todays-subjects",
+        html: items.join( "" )
+      }).appendTo( "div.todays-classes div.todays-classes-2" );
+    });
 
 
 });
