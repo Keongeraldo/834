@@ -81,12 +81,6 @@ span#day {
     text-decoration: underline;
 }
 
-@media screen and (max-width: 450px){
-  span#day{
-    display: block;
-  }
-}
-
 li.somo-la-leo {
     display: list-item;
     border: solid 1px aquamarine;
@@ -138,6 +132,21 @@ a.go-to-full-timetable {
 a.go-to-full-timetable:hover {
   background: #7FDBFF;
   box-shadow: 1px 1px 0px #b2e9ff, 2px 2px 0px #b2e9ff, 3px 3px 0px #b2e9ff, 4px 4px 0px #e5f8ff, 5px 5px 0px white, 6px 6px 0px white, 7px 7px 0px white;
+}
+
+@media screen and (max-width: 450px){
+  span#day{
+    display: block;
+  }
+
+  li.somo-la-leo {
+    font-size: 10pt;
+  }
+
+  p.kuhusu-somo span.bolder {
+    font-size: 12pt;
+  }
+
 }
 
 p.issue {
