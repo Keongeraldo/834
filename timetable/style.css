@@ -8,10 +8,10 @@ body {
     background-color: rgba(248, 248, 248, 0.2);
 }
 
-div#timetable-app {
+/*div#timetable-app {
     display: -webkit-box;
     overflow: auto;
-}
+}*/
 
 .logo .navbar-brand {
 	display: inline-block;
@@ -62,14 +62,12 @@ div#timetable-app {
     /* border-radius: 5px; */
 }
 
-
-
 .row.todays-classes {
     width: 90%;
     margin: 0 auto;
+    margin-bottom: 22px;
     background: #93e7ff;
     border-radius: 4px;
-    margin-bottom: 10px;
     box-shadow: #38b9de 1px 1px 6px 2px;
 }
 

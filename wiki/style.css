@@ -29,10 +29,12 @@ body {
 }
 
 .intro-questions h4{
-  color: #03337b;
-  font-size: 15pt;
+  color: #5ed2fb;
+  font-size: 17pt;
   margin-top: 21px;
-
+  /* text-decoration: underline; */
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .subject-intro h3{
@@ -61,6 +63,7 @@ div .thumbnail a.to-github:hover{
     background: linear-gradient(rgba(0,188,212,0.08), rgba(91, 192, 222, 0.08));
     border-radius: 8px;
     padding: 10px 0;
+    margin-bottom: 24px;
 }
 
 .subject-tiles div.thumbnail img{
@@ -104,7 +107,7 @@ div .thumbnail a.to-github:hover{
 .row.todays-classes {
     margin: 0 auto;
     /*background: #93e7ff;*/
-    background: rgba(3, 169, 244, 0.66);
+    background: rgba(3, 169, 244, 0.56);
     border-radius: 4px;
     margin-bottom: 1.75%;
     box-shadow: #38b9de 1px 1px 6px 2px;
@@ -179,6 +182,9 @@ li.somo-la-leo.free-para {
     font-size: 10pt;
   }
 
+  p.kuhusu-somo {
+      display: inline-block;
+  }
   p.kuhusu-somo span.bolder {
     font-size: 12pt;
   }
