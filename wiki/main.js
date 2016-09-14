@@ -127,9 +127,25 @@ $(document).ready(function(){
   });
 
 // The flip clock plugin for an awesome countdown timer.
-      var clock;
+     var clocks = [];
 
-      clock = $('.clock').FlipClock({
+      // Grab the current date
+      var currentDate = new Date();
+
+      // Set some date in the future. In this case, it's always Jan 1
+      var futureDate  = new Date(currentDate.getFullYear(), 8, 15, 10, 50);
+
+      // Calculate the difference in seconds between the future and current date
+      var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
+      // Instantiate a coutdown FlipClock
+      clocks.push($('.clock0').FlipClock(diff, {
+        clockFace: 'DailyCounter',
+        countdown: true,
+        showDays: false
+      }));
+
+      clock1 = $('.clock1').FlipClock({
             clockFace: 'DailyCounter',
             autoStart: false,
             callbacks: {
@@ -139,9 +155,10 @@ $(document).ready(function(){
             }
         });
             
-        clock.setTime(220880);
-        clock.setCountdown(true);
-        clock.start();
+        clock1.setTime(220880);
+        clock1.setCountdown(true);
+        clock1.start();
+        clocks.push(clock1)
 
 
 });
