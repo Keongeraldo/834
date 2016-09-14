@@ -544,15 +544,15 @@ height: 10px;
   .week-highlights .clock0.flip-clock-wrapper ul li a div div.inn {
       color: #ccc;
       /*background-color: #303;*/
-      font-size: 22px;
+      font-size: 25px;
   }
   .week-highlights .clock0.flip-clock-wrapper ul li {
-    line-height: 25px;
+    line-height: 30px;
   }
   .week-highlights .clock0.flip-clock-wrapper ul {
-    height: 25px;
+    height: 29px;
     padding: 8px;
-    width: 22px;
+    width: 24px;
     margin: 4px  1px;
   }
   .week-highlights .clock0.flip-clock-wrapper .flip-clock-divider {
@@ -588,12 +588,12 @@ height: 10px;
       font-size: 20px;
   }
   .week-highlights ul li .flip-clock-wrapper ul li {
-    line-height: 30px;
+    line-height: 25px;
   }
   .week-highlights ul li .flip-clock-wrapper ul {
-    height: 28px;
+    height: 24px;
     padding: 8px;
-    width: 24px;
+    width: 22px;
     margin: 4px  1px;
   }
   .week-highlights ul li .flip-clock-wrapper .flip-clock-divider {
