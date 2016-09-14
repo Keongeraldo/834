@@ -585,15 +585,15 @@ height: 10px;
   .week-highlights ul li .flip-clock-wrapper ul li a div div.inn {
       color: #ccc;
       /*background-color: #303;*/
-      font-size: 18px;
+      font-size: 20px;
   }
   .week-highlights ul li .flip-clock-wrapper ul li {
-    line-height: 20px;
+    line-height: 30px;
   }
   .week-highlights ul li .flip-clock-wrapper ul {
-    height: 18px;
+    height: 28px;
     padding: 8px;
-    width: 22px;
+    width: 24px;
     margin: 4px  1px;
   }
   .week-highlights ul li .flip-clock-wrapper .flip-clock-divider {
