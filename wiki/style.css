@@ -2,7 +2,8 @@
 font-family: 'Overlock SC', cursive;*/
 
 body {
-  font-family: 'Overlock', cursive;
+    font-family: 'Open Sans', sans-serif;
+    /*font-family: 'Overlock', cursive;*/
     font-size: 14pt;
     color: #00183e;
     background-color: rgba(248, 248, 248, 0.2);
