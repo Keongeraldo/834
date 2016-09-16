@@ -113,9 +113,10 @@ div .thumbnail a.to-github:hover{
 
 .week-highlights .blizh-sroki > li {
     border: aliceblue 2px solid;
+    background: rgba(240, 248, 255, 0.32);
     border-radius: 5px;
-    margin: 8px 0;
-    padding: 7px;
+    margin: 14px 0;
+    padding: 8px;
     list-style-type: lower-greek;
 }
 
