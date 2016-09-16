@@ -133,7 +133,7 @@ $(document).ready(function(){
       var currentDate = new Date();
 
       // Set some date in the future. In this case, it's always Jan 1
-      var futureDate  = new Date(currentDate.getFullYear(), 8, 15, 10, 50);
+      var futureDate  = new Date(currentDate.getFullYear(), 12, 29, 10, 50);
 
       // Calculate the difference in seconds between the future and current date
       var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
@@ -155,7 +155,7 @@ $(document).ready(function(){
             }
         });
             
-        clock1.setTime(220880);
+        clock1.setTime(9208800);
         clock1.setCountdown(true);
         clock1.start();
         clocks.push(clock1)

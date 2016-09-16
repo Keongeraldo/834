@@ -146,11 +146,11 @@ $(document).ready(function(){
 
         //FIX BUG
 
-        // var theMonday = new Date(d.getTime() - (d.getDay() - 1) * 24 * 60 * 60 * 1000);
-        // var currentDate = new Date(theMonday.getTime() + (dayOfTheWeek-1) * 24 * 60 * 60 * 1000);
+        var theMonday = new Date(d.getTime() - (d.getDay() - 1) * 24 * 60 * 60 * 1000);
+        var currentDate = new Date(theMonday.getTime() + (7-1) * 24 * 60 * 60 * 1000);
         $('#timetable-app').append('<div class="row todays-classes"><div class="col-md-10 col-md-offset-1 todays-classes-2">' +
                   '<h3>This is a <span class="day">' + weekday[0] + '</span>' + ' of the ' + weekNumber + ' </h3>' +
-                  // '<h3>' + monthName[currentDate.getMonth()] + ', ' + currentDate.getDate() + '</h3>' +
+                  '<h3>' + monthName[currentDate.getMonth()] + ', ' + currentDate.getDate() + '</h3>' +
                 '</div> </div>');
         $( "<h4/>", {
             "class": "rest-sunday",

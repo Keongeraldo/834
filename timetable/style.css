@@ -82,16 +82,19 @@ span#day {
 }
 
 h4.rest-saturday {
+    margin: 3%;
     text-align: center;
     font-size: 20pt;
     color: aqua;
     border-radius: 5px;
     padding: 50px 40px;
     background: #2196F3;
+    box-shadow: #5bb3ff 0px 0px 12px 1px;
 }
 
 
 h4.rest-sunday {
+    margin: 3%;
     font-size: 20pt;
     text-align: center;
     font-weight: 600;
