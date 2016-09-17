@@ -32,5 +32,5 @@ In this repository is therefore a list of folders in alphabetical order for each
 
 #### Tribute
  This repository has been 100% inspired by:
- * [Daniel Shiiffman](http://shiffman.net/) and the current ongoing [Fall 2016 Programming from A to Z](https://github.com/shiffman/A2Z-F16) course.
+ * [Daniel Shiffman](http://shiffman.net/) and the current ongoing [Fall 2016 Programming from A to Z](https://github.com/shiffman/A2Z-F16) course.
  * [Andreas Weigend](http://www.weigend.com/) and the also wonderful ongoing [Social Data Revolution](https://sdr2016.wikispaces.com/) course.
