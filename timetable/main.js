@@ -53,11 +53,20 @@ $(document).ready(function(){
     var items = [];
     var weekNumber;
 
-    if (d.getWeek()%2 == 0){
-      weekNumber = "SecondWeek";
-    }else if (d.getWeek()%2 == 1){
-      weekNumber = "FirstWeek";
+    if (d.getDay() != 0) {
+      if (d.getWeek()%2 == 0){
+        weekNumber = "SecondWeek";
+      }else if (d.getWeek()%2 == 1){
+        weekNumber = "FirstWeek";
+      }     
+    }else{
+      if (d.getWeek()%2 == 0){
+        weekNumber = "FirstWeek";
+      }else if (d.getWeek()%2 == 1){
+        weekNumber = "SecondWeek";
+      }
     }
+
 
 
     for (var dayOfTheWeek = 1; dayOfTheWeek < 7; dayOfTheWeek++) {
@@ -121,16 +130,6 @@ $(document).ready(function(){
           $('div.row.todays-classes:last').addClass("saturday");
 
         }
-        // else if(weekday[dayOfTheWeek] == "Sunday"){
-        //   //if the day is a free one and it is a SUNDAY
-        //   addDoubleDiv ();
-        //   $( "<h4/>", {
-        //       "class": "rest-sunday",
-        //       text: "You just need to relax and take it easy."
-        //     }).appendTo( "div.todays-classes div.todays-classes-2:last" );
-        //   $('div .row.todays-classes:last').addClass("sunday");
-
-        // }
         else{
           addDoubleDiv ();
           $( "<h4/>", {
