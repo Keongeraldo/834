@@ -151,7 +151,7 @@ $(document).ready(function(){
           todayHighlight: true,
           weekStart: 1,
           daysOfWeekHighlighted: "0,6",
-          calendarWeeks: true
+          // calendarWeeks: true
 
       });
 
