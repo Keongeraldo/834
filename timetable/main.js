@@ -176,7 +176,7 @@ $(document).ready(function(){
             }
 
             var dayOfTheWeek = gtdDate.getDay();
-            metaForTheDaysClasses(gtdDate, dayOfTheWeek, weekNumber, '#go-to-date-div');
+            metaForTheDaysClasses(gtdDate, dayOfTheWeek, weekNumber, '#go-to-date-div', 'removeIcon');
             
             $.getJSON( "UniSem07Timetable.json", getDaysTimetable);
 
@@ -189,16 +189,27 @@ $(document).ready(function(){
             }
 
           }
-      });  
-
+      });
+      
+      //Remove the grand-parent when the remove icon is clicked....
+      // Update it to even remove it completely from the DOM
+      $("#go-to-date-div").on( "click", ".rt .glyphicon-remove", function() {
+          $( this ).parent().parent().parent().slideUp( 300 );
+      });
 });
 
 
-function metaForTheDaysClasses (date, dayN, weeknumber, domPlacement){
-  $(domPlacement).append('<div class="row todays-classes no-display"><div class="col-md-10 col-md-offset-1 todays-classes-2">' +
-                  '<h3>This is a <span class="day">' + weekday[dayN] + '</span>' + ' of the ' + weeknumber + ' </h3>' +
-                  '<h3>' + monthName[date.getMonth()] + ', ' + date.getDate() + '</h3>' +
-                '</div> </div>');
+function metaForTheDaysClasses (date, dayN, weeknumber, domPlacement, removeIcon){
+  var l1 = '<div class="row todays-classes no-display"><div class="col-md-10 col-md-offset-1 todays-classes-2">';
+  var l2 = '';
+  var l3 = '<h3>This is a <span class="day">' + weekday[dayN] + '</span>' + ' of the ' + weeknumber + ' </h3>';
+  var l4 = '<h3>' + monthName[date.getMonth()] + ', ' + date.getDate() + '</h3>' + '</div> </div>';
+
+  if (arguments[4] == 'removeIcon' ) {
+    var l2 = '<div class="rt"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>';
+  }
+
+  $(domPlacement).append( l1 + l2 + l3 + l4 );
 }
 
 

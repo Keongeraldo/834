@@ -232,3 +232,12 @@ footer.stay-bottom {
 .no-display {
     display: none;
 }
+
+.rt {
+    text-align: right;
+    padding: 5px 0px 1px;
+}
+
+.rt .glyphicon {
+    cursor: pointer;
+}
