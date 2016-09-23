@@ -228,3 +228,7 @@ footer.stay-bottom {
     padding-top: 5px;
     background: rgba(236, 236, 236, 0.34);
 }
+
+.no-display {
+    display: none;
+}

@@ -102,6 +102,7 @@ $(document).ready(function(){
             "class": "todays-subjects",
             html: items[dayOfTheWeek].join( "" ),
           }).appendTo( "div.todays-classes div.todays-classes-2:last" );
+        $('div.row.todays-classes:last').slideDown(1800);
       }
       else{
         if(weekday[dayOfTheWeek] == "Saturday"){
@@ -111,7 +112,7 @@ $(document).ready(function(){
               "class": "rest-saturday",
               text: "Supercool that there are no classes today. Enjoy resposibly."
             }).appendTo( "div.todays-classes div.todays-classes-2:last" );
-          $('div.row.todays-classes:last').addClass("saturday");
+          $('div.row.todays-classes:last').addClass("saturday").slideDown(100);
 
         }
         else{
@@ -120,7 +121,7 @@ $(document).ready(function(){
             "class": "rest-weekday",
              text: "Today is a day to sleep."  
           }).appendTo( "div.todays-classes div.todays-classes-2:last" );
-          $('div .row.todays-classes:last').addClass("freeday");
+          $('div .row.todays-classes:last').addClass("freeday").slideDown(100);
         }
       }
     }
@@ -135,7 +136,7 @@ $(document).ready(function(){
             "class": "rest-sunday",
             text: "You just need to relax and take it easy."
           }).appendTo( "div.todays-classes div.todays-classes-2:last" );
-          $('div .row.todays-classes:last').addClass("sunday");
+          $('div .row.todays-classes:last').addClass("sunday").slideDown(100);
 
 
   }
@@ -194,7 +195,7 @@ $(document).ready(function(){
 
 
 function metaForTheDaysClasses (date, dayN, weeknumber, domPlacement){
-  $(domPlacement).append('<div class="row todays-classes"><div class="col-md-10 col-md-offset-1 todays-classes-2">' +
+  $(domPlacement).append('<div class="row todays-classes no-display"><div class="col-md-10 col-md-offset-1 todays-classes-2">' +
                   '<h3>This is a <span class="day">' + weekday[dayN] + '</span>' + ' of the ' + weeknumber + ' </h3>' +
                   '<h3>' + monthName[date.getMonth()] + ', ' + date.getDate() + '</h3>' +
                 '</div> </div>');
@@ -257,12 +258,13 @@ function classLogic (TodaysSubjects, domPlacement, items, dayOfTheWeek) {
 
           //Append the html and class details for similar stylings like in the wiki
           addDDLogic();
-          $(domPlacement).append('<h4>This day'+ "'" + 's classes are: </h4>')
-
+          $(domPlacement).append('<h4>This day'+ "'" + 's classes are: </h4>');
         $( "<ol/>", {
             "class": "todays-subjects",
             html: items[dayOfTheWeek].join( "" ),
           }).appendTo( domPlacement );
+        $('div.row.todays-classes:last').slideDown( 250 );
+
       }
       else{
         if(weekday[dayOfTheWeek] == "Saturday"){
@@ -272,7 +274,7 @@ function classLogic (TodaysSubjects, domPlacement, items, dayOfTheWeek) {
               "class": "rest-saturday",
               text: "Supercool that there are no classes today. Enjoy resposibly."
             }).appendTo( domPlacement );
-          $('div.row.todays-classes:last').addClass("saturday");
+          $('div.row.todays-classes:last').addClass("saturday").slideDown( 250 );
 
         }
         else if (weekday[dayOfTheWeek] == "Sunday"){
@@ -280,7 +282,7 @@ function classLogic (TodaysSubjects, domPlacement, items, dayOfTheWeek) {
             "class": "rest-sunday",
             text: "You just need to relax and take it easy."
           }).appendTo( "div.todays-classes div.todays-classes-2:last" );
-          $('div .row.todays-classes:last').addClass("sunday");
+          $('div .row.todays-classes:last').addClass("sunday").slideDown( 250 );
         }
         else{
           addDDLogic();
@@ -288,7 +290,7 @@ function classLogic (TodaysSubjects, domPlacement, items, dayOfTheWeek) {
             "class": "rest-weekday",
              text: "Today is a day to sleep."  
           }).appendTo( domPlacement );
-          $('div .row.todays-classes:last').addClass("freeday");
+          $('div .row.todays-classes:last').addClass("freeday").slideDown( 250 );
         }
       }
 }
