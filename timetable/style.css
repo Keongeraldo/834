@@ -182,7 +182,31 @@ a.go-to-full-timetable:hover {
   }
 
 }
-
+hr.separator {
+    margin-bottom: 40px;
+}
+div#go-to-date-div {
+    background: rgba(235,235,250,1);
+    padding: 10px;
+    border-radius: 4px;
+}
+.input-group.date {
+    margin: 20px 10px 20px;
+}
+.col-md-2.put-center {
+    margin: 0;
+    padding: 0;
+    width: 12%;
+}
+.put-center button.btn.btn-info {
+    box-sizing: border-box;
+    margin: 20px 0px;
+    width: 80%;
+    max-width: 120px;
+}
+#go-to-date-div .input-group[class*=col-] {
+    float: left;
+}
 p.issue {
   background-color: #d5f4fd;
   text-align: center;
