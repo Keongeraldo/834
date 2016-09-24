@@ -196,6 +196,10 @@ $(document).ready(function(){
       $("#go-to-date-div").on( "click", ".rt .glyphicon-remove", function() {
           $( this ).parent().parent().parent().slideUp( 300 );
       });
+
+
+      //Put the current year on the copyright at the bottom of the page.
+      $('.cprt-year #current-year').text(d.getFullYear());
 });
 
 

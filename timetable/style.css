@@ -190,6 +190,11 @@ div#go-to-date-div {
     padding: 10px;
     border-radius: 4px;
 }
+.go-to-date-info h4 {
+    color: #4e4e4e;
+    padding-top: 5px;
+    text-decoration: underline;
+}
 .input-group.date {
     margin: 20px 10px 20px;
 }
