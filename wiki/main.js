@@ -126,6 +126,10 @@ $(document).ready(function(){
 
   });
 
+
+  //Put the current year on the copyright at the bottom of the page.
+      $('.cprt-year #current-year').text(d.getFullYear());
+
 // The flip clock plugin for an awesome countdown timer.
      var clocks = [];
 
