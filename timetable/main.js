@@ -66,6 +66,8 @@ $(document).ready(function(){
 
       var TodaysSubjects = data[weekNumber][weekday[dayOfTheWeek]];
 
+      // classLogic (TodaysSubjects, "div.todays-classes div.todays-classes-2:last", items, dayOfTheWeek, 'addDD' );
+
       if (TodaysSubjects.length > 0) {
         //if it is not a free day then write out the classes we are having
         for (var i = 0; i < TodaysSubjects.length; i++) {
@@ -176,7 +178,7 @@ $(document).ready(function(){
             }
 
             var dayOfTheWeek = gtdDate.getDay();
-            metaForTheDaysClasses(gtdDate, dayOfTheWeek, weekNumber, '#go-to-date-div', 'removeIcon');
+            metaForTheDaysClasses(gtdDate, dayOfTheWeek, weekNumber, '#go-to-date-div .row2', 'removeIcon');
             
             $.getJSON( "UniSem07Timetable.json", getDaysTimetable);
 
@@ -186,6 +188,7 @@ $(document).ready(function(){
 
               var TodaysSubjects = data[weekNumber][weekday[dayOfTheWeek]];
               classLogic (TodaysSubjects, "div.todays-classes div.todays-classes-2:last", items, dayOfTheWeek );
+
             }
 
           }
@@ -203,7 +206,7 @@ $(document).ready(function(){
 });
 
 
-function metaForTheDaysClasses (date, dayN, weeknumber, domPlacement, removeIcon){
+function metaForTheDaysClasses (date, dayN, weeknumber, domPlacement, removeIcon, AppOrPrep){
   var l1 = '<div class="row todays-classes no-display"><div class="col-md-10 col-md-offset-1 todays-classes-2">';
   var l2 = '';
   var l3 = '<h3>This is a <span class="day">' + weekday[dayN] + '</span>' + ' of the ' + weeknumber + ' </h3>';
@@ -213,7 +216,13 @@ function metaForTheDaysClasses (date, dayN, weeknumber, domPlacement, removeIcon
     var l2 = '<div class="rt"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>';
   }
 
-  $(domPlacement).append( l1 + l2 + l3 + l4 );
+  if (AppOrPrep == 'append') {
+    $(domPlacement).append( l1 + l2 + l3 + l4 );
+  }else if (AppOrPrep == 'prepend') {
+    $(domPlacement).prepend( l1 + l2 + l3 + l4 );
+  }else{
+    $(domPlacement).append( l1 + l2 + l3 + l4 );
+  }
 }
 
 
@@ -235,7 +244,15 @@ function giveWeekNumber (d) {
     return weekNumber;
 }
 
-function classLogic (TodaysSubjects, domPlacement, items, dayOfTheWeek) {
+// metaForTheDaysClasses(currentDate, dayOfTheWeek, weekNumber, '#timetable-app');
+
+
+// $('#timetable-app').append('<div class="row todays-classes"><div class="col-md-10 col-md-offset-1 todays-classes-2">' +
+//                   '<h3>This is a <span class="day">' + weekday[dayOfTheWeek] + '</span>' + ' of the ' + weekNumber + ' </h3>' +
+//                   '<h3>' + monthName[currentDate.getMonth()] + ', ' + currentDate.getDate() + '</h3>' +
+//                 '</div> </div>');
+
+function classLogic (TodaysSubjects, domPlacement, items, dayOfTheWeek, addDD) {
 
   function addDDLogic(){
     if (arguments[4] == 'addDD') {
@@ -309,13 +326,3 @@ function classLogic (TodaysSubjects, domPlacement, items, dayOfTheWeek) {
         }
       }
 }
-
-
-
-// metaForTheDaysClasses(currentDate, dayOfTheWeek, weekNumber, '#timetable-app');
-
-
-// $('#timetable-app').append('<div class="row todays-classes"><div class="col-md-10 col-md-offset-1 todays-classes-2">' +
-//                   '<h3>This is a <span class="day">' + weekday[dayOfTheWeek] + '</span>' + ' of the ' + weekNumber + ' </h3>' +
-//                   '<h3>' + monthName[currentDate.getMonth()] + ', ' + currentDate.getDate() + '</h3>' +
-//                 '</div> </div>');
