@@ -66,10 +66,45 @@ div .thumbnail a.to-github:hover{
     padding: 10px 0;
 }
 
-.subject-tiles div.thumbnail img{
-  display: none;
+.subject-meta {
+    display: inline-table;
+    border-bottom: dotted rgba(194, 224, 251, 0.63) 2px;
+    padding: 10px 0px 1px;
 }
 
+.subject-tiles div.thumbnail .subject-meta img {
+    display: block;
+    max-width: 100%;
+    width: 45%;
+    margin: 0 2.5%;
+    border-radius: 4px;
+    float: left;
+}
+
+.subject-meta .subject-meta-details {
+    width: 45%;
+    float: left;
+    margin: 0 2%;
+}
+
+.subject-meta-details h4 {
+    font-size: 0.9em;
+    line-height: 1;
+    margin: 2px 0px;
+    text-decoration: underline;
+    text-shadow: #99a8ff 0px 0px 1px;
+}
+
+.subject-meta-details p{
+  font-size: 0.8em;
+}
+
+.subject-meta-details hr {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border: 0;
+    /* border-top: 1px solid #eee; */
+}
 
 * { box-sizing: border-box; }
 
@@ -252,6 +287,7 @@ a.go-to-full-timetable:hover {
 p.issue {
   background-color: #d5f4fd;
   text-align: center;
+  margin-top: 10px;
 }
 
 p.issue a {
@@ -268,7 +304,7 @@ footer p.proudly{
 }
 
 footer.stay-bottom {
-    margin-top: 20px;
+    margin-top: 15px;
     padding-top: 5px;
     background: rgba(236, 236, 236, 0.34);
 }
