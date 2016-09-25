@@ -176,7 +176,7 @@ $(document).ready(function(){
             }
 
             var dayOfTheWeek = gtdDate.getDay();
-            metaForTheDaysClasses(gtdDate, dayOfTheWeek, weekNumber, '#go-to-date-div', 'removeIcon');
+            metaForTheDaysClasses(gtdDate, dayOfTheWeek, weekNumber, '#go-to-date-div .row2', 'removeIcon');
             
             $.getJSON( "UniSem07Timetable.json", getDaysTimetable);
 
