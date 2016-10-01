@@ -26,11 +26,12 @@ In this repository is therefore a list of folders in alphabetical order for each
 
 
 
+## Site
+The organised more readable version of all the content in this folder is set to be displayed on [834 WIKI](http://www.gideonamani.com/834/wiki/)
 
 
 
-
-#### Tribute
+## Tribute
  This repository has been 100% inspired by:
  * [Daniel Shiffman](http://shiffman.net/) and the current ongoing [Fall 2016 Programming from A to Z](https://github.com/shiffman/A2Z-F16) course.
  * [Andreas Weigend](http://www.weigend.com/) and the also wonderful ongoing [Social Data Revolution](https://sdr2016.wikispaces.com/) course.
