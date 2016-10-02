@@ -5,4 +5,4 @@
 * [Class 003](https://github.com/Gideonamani/834/blob/gh-pages/%D0%9A%D0%BE%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D0%B8%D1%8F%20%D0%B8%20%D0%9F%D1%80%D0%BE%D1%87%D0%BD%D0%BE%D1%81%D1%82%D1%8C%20%D0%90%D0%94/Class%20003.md) Sept 14, 2016
 * [Class 004](https://github.com/Gideonamani/834/blob/gh-pages/%D0%9A%D0%BE%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D0%B8%D1%8F%20%D0%B8%20%D0%9F%D1%80%D0%BE%D1%87%D0%BD%D0%BE%D1%81%D1%82%D1%8C%20%D0%90%D0%94/Class%20004.md) Sept 19, 2016
 * [Class 005](https://github.com/Gideonamani/834/blob/gh-pages/%D0%9A%D0%BE%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D0%B8%D1%8F%20%D0%B8%20%D0%9F%D1%80%D0%BE%D1%87%D0%BD%D0%BE%D1%81%D1%82%D1%8C%20%D0%90%D0%94/Class%20005.md) Sept 26, 2016
-
+* [Class 006](https://github.com/Gideonamani/834/blob/gh-pages/%D0%9A%D0%BE%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D0%B8%D1%8F%20%D0%B8%20%D0%9F%D1%80%D0%BE%D1%87%D0%BD%D0%BE%D1%81%D1%82%D1%8C%20%D0%90%D0%94/Class%20006.md) Oct 3, 2016
