@@ -73,68 +73,93 @@
 				    </div>
 				  </div>
 
-				<!-- Tab area for multiple input types Style1 -->
+				<!-- Tab area for multiple input types Style4 -->
 				<div class="col-md-12 mabina-multiple">
 					<div class="col-sm-2">
 						<label>Select a file a type</label>
 					</div>
 
 					<div class="col-sm-10">
-					  <!-- Nav tabs -->
-					  <ul class="nav nav-tabs" role="tablist">
-					    <li role="presentation" class="active"><a href="#DOC" aria-controls="DOC" role="tab" data-toggle="tab">DOC File</a></li>
-					    <li role="presentation"><a href="#MD" aria-controls="MD" role="tab" data-toggle="tab">Markdown File</a></li>
-					    <li role="presentation"><a href="#PDF" aria-controls="PDF" role="tab" data-toggle="tab">PDF</a></li>
-					    <li role="presentation"><a href="#AudioFile" aria-controls="AudioFile" role="tab" data-toggle="tab">Audio</a></li>
-					    <li role="presentation"><a href="#VideoFile" aria-controls="VideoFile" role="tab" data-toggle="tab">Video</a></li>
-					  </ul>
+						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
-					  <!-- Tab panes -->
-					  <div class="tab-content">
-					    <div role="tabpanel" class="tab-pane active" id="DOC">
-					    	<div class="form-group">
-							    <label for="DOCFileInput" class="col-sm-2 control-label"> Link for DOC</label>
-							    <div class="col-sm-10">
-							      <input type="text" class="form-control" id="DOCFileInput" placeholder="http://url-to-the-file" name="Link DOC">
-							    </div>
-							</div>
-					    </div>
-					    <div role="tabpanel" class="tab-pane" id="MD">
-					    	<div class="form-group">
-							    <label for="MDFileInput" class="col-sm-2 control-label"> Link for MD</label>
-							    <div class="col-sm-10">
-							      <input type="text" class="form-control" id="MDFileInput" placeholder="http://url-to-the-file" name="Link MD">
-							    </div>
-							</div>
-					    </div>
-					    <div role="tabpanel" class="tab-pane" id="PDF">
-					    	<div class="form-group">
-							    <label for="PDFFileInput" class="col-sm-2 control-label"> Link for PDF</label>
-							    <div class="col-sm-10">
-							      <input type="text" class="form-control" id="PDFFileInput" placeholder="http://url-to-the-file" name="Link PDF">
-							    </div>
-							</div>
-					    </div>
-					    <div role="tabpanel" class="tab-pane" id="AudioFile">
-					    	<div class="form-group">
-							    <label for="AudioFileInput" class="col-sm-2 control-label"> Link for Audio </label>
-							    <div class="col-sm-10">
-							      <input type="text" class="form-control" id="AudioFileInput" placeholder="http://url-to-the-file" name="Link AUDIO">
-							    </div>
-							</div>
-					    </div>
-					    <div role="tabpanel" class="tab-pane" id="VideoFile">
-					    	<div class="form-group">
-							    <label for="VideoFileInput" class="col-sm-2 control-label"> Link for Video </label>
-							    <div class="col-sm-10">
-							      <input type="text" class="form-control" id="VideoFileInput" placeholder="http://url-to-the-file" name="Link VIDEO">
-							    </div>
-							</div>
-					    </div>
-					  </div>
+						  <div class="panel panel-default">
+						    <div class="panel-heading" role="tab" id="headingOne">
+						      <h4 class="panel-title">
+						        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+						          Link for DOC
+						        </a>
+						      </h4>
+						    </div>
+						    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+						      <div class="panel-body">
+						        <input type="text" class="form-control" id="DOCFileInput" placeholder="http://url-to-the-file" name="Link DOC">
+						      </div>
+						    </div>
+						  </div>
+
+						  <div class="panel panel-default">
+						    <div class="panel-heading" role="tab" id="headingTwo">
+						      <h4 class="panel-title">
+						        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+						          Link for MD
+						        </a>
+						      </h4>
+						    </div>
+						    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+						      <div class="panel-body">
+						        <input type="text" class="form-control" id="MDFileInput" placeholder="http://url-to-the-file" name="Link MD">
+						      </div>
+						    </div>
+						  </div>
+
+						  <div class="panel panel-default">
+						    <div class="panel-heading" role="tab" id="headingThree">
+						      <h4 class="panel-title">
+						        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+						          Link for PDF
+						        </a>
+						      </h4>
+						    </div>
+						    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+						      <div class="panel-body">
+						        <input type="text" class="form-control" id="PDFFileInput" placeholder="http://url-to-the-file" name="Link PDF">
+						      </div>
+						    </div>
+						  </div>
+
+						  <div class="panel panel-default">
+						    <div class="panel-heading" role="tab" id="headingFour">
+						      <h4 class="panel-title">
+						        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+						          Link for AUDIO
+						        </a>
+						      </h4>
+						    </div>
+						    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+						      <div class="panel-body">
+						        <input type="text" class="form-control" id="AUDIOFileInput" placeholder="http://url-to-the-file" name="Link AUDIO">
+						      </div>
+						    </div>
+						  </div>
+
+						  <div class="panel panel-default">
+						    <div class="panel-heading" role="tab" id="headingFive">
+						      <h4 class="panel-title">
+						        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+						          Link for VIDEO
+						        </a>
+					          </h4>
+						    </div>
+						    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+						      <div class="panel-body">
+						        <input type="text" class="form-control" id="VIDEOFileInput" placeholder="http://url-to-the-file" name="Link VIDEO">
+						      </div>
+						    </div>
+						  </div>
+						</div>
 					</div>
-
 				</div>
+
 
 
 				  <div class="form-group">
