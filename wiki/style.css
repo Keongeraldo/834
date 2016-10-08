@@ -106,6 +106,36 @@ div .thumbnail a.to-github:hover{
     /* border-top: 1px solid #eee; */
 }
 
+.class-list {
+
+}
+
+.class-list .panel {
+  margin-bottom: 8px;
+}
+
+.class-list .panel .panel-heading {
+  padding: 5px;
+}
+
+.class-list .panel .panel-heading p {
+  margin-bottom: 0px;
+}
+
+.class-list .panel .panel-body {
+  padding: 5px;
+}
+
+.class-list .panel .panel-body button {
+  width: 51.7px;
+  padding: 5px 2px;
+  margin-bottom: 2px;
+}
+
+.class-list .panel .panel-body button.btn {
+  font-size: 9pt;
+}
+
 * { box-sizing: border-box; }
 
 /* ---- grid ---- */
