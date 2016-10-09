@@ -12,58 +12,71 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="stylesheet" href="FlipClock/compiled/flipclock.css">
 	</head>
-	<body>
-		<header>
-			<!-- <nav class="navbar navbar-default navbar-fixed-top">
+	<body style="position: relative; padding-top: 70px;" data-spy="scroll" data-target="#bs-example-navbar-collapse-1">
+
+		<!-- Modal content-->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+		      </div>
+		      <div class="modal-body">
+		        ...
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-primary">Save changes</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>			
+
+		<!-- End of model content -->
+		
+		<header id="thenav">
+			<nav class="navbar navbar-default navbar-fixed-top">
 			  <div class="container-fluid">
+			    <!-- Brand and toggle get grouped for better mobile display -->
 			    <div class="navbar-header logo">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
 			      <a class="navbar-brand" href="https://vk.com/club58832439">
-			        <img alt="Brand" src="logo.jpg" title="Go to the VK page!">
-			      </a>
+						<img alt="Brand" src="logo.jpg" title="Go to the VK page!">
+				  </a>
 			    </div>
+
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav nav-tabs navbar-right" role="tablist">
+				    <li><a href="#Home">Список</a></li>
+			        <li><a href="#countdowns">Сроки</a></li>
+			        <li><a href="#todays-classes">Расписание</a></li>
+			        <li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages <span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <!-- <li><a href="#">Action</a></li>
+			            <li><a href="#">Another action</a></li> -->
+			            <li><a href="../ClassInput">Class Input</a></li>
+			            <li role="separator" class="divider"></li>
+			            <li><a href="../timetable">Full Timetable</a></li>
+			          </ul>
+			        </li>
+			        <li>
+			        	<!-- Button trigger modal -->
+			        	<button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModal">Sign In</button>
+			        	<button type="button" class="btn btn-default navbar-btn">Log In</button>
+			        	<!-- <button type="button" class="btn btn-default navbar-btn">Mabina </button> -->
+			        </li>
+			      </ul>
+				</div>
 			  </div>
 			</nav>
- -->
-
-<nav class="navbar navbar-default navbar-static-top">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header logo">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="https://vk.com/club58832439">
-			<img alt="Brand" src="logo.jpg" title="Go to the VK page!">
-	  </a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#countdowns">Сроки</a></li>
-        <li><a href="#todays-classes">Расписание</a></li>
-        <!-- <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li> -->
-      </ul>
-	</div>
-  </div>
-</nav>
-
-
-
-
-
 		</header>
 
 		<div class="container">
@@ -91,7 +104,7 @@
 				</div>
 				
 			</div>
-			<div class="row subject-tiles">
+			<div class="row subject-tiles" id="Home">
 			
 				<div class="col-lg-12 subject-intro">
 					<h3> Список предметов этого семестра. </h3>
@@ -518,19 +531,21 @@
 			    </div>
 		    </div>
 
-		    <div class="row todays-classes" id="todays-classes">
-		    	<div class="col-md-10 col-md-offset-1 todays-classes-2">
-		    		<h3>Today is <span id="day"></span></h3>	
-		    		<!-- <ul id="todays-subjects">
-		    			
-		    		</ul> -->
-		    	</div>
-		    	 <div class="col-md-12">
-	    			<div class="put-center">
-	    				<a class="go-to-full-timetable" href="http://www.gideonamani.com/834/timetable/"> Check out <b>this week's</b> full timetable  </a> 
-	    			</div>
+		    <div id="to">
+			    <div class="row todays-classes">
+			    	<div class="col-md-10 col-md-offset-1 todays-classes-2">
+			    		<h3>Today is <span id="day"></span></h3>	
+			    		<!-- <ul id="todays-subjects">
+			    			
+			    		</ul> -->
+			    	</div>
+			    	 <div class="col-md-12">
+		    			<div class="put-center">
+		    				<a class="go-to-full-timetable" href="http://www.gideonamani.com/834/timetable/"> Check out <b>this week's</b> full timetable  </a> 
+		    			</div>
+				    </div>
 			    </div>
-		    </div>
+			</div>
 
 		    <div class="row">
 		    	<p class="issue"> Have any suggestion or something not right? That's cool. Feel free to open up an <a href="https://github.com/Gideonamani/834/issues">issue</a>.</p>

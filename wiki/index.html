@@ -13,6 +13,27 @@
 		<link rel="stylesheet" href="FlipClock/compiled/flipclock.css">
 	</head>
 	<body style="position: relative; padding-top: 70px;" data-spy="scroll" data-target="#bs-example-navbar-collapse-1">
+		<!-- Modal content-->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+		      </div>
+		      <div class="modal-body">
+		        ...
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-primary">Save changes</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>			
+
+		<!-- End of model content -->
+		
 		<header id="thenav">
 			<nav class="navbar navbar-default navbar-fixed-top">
 			  <div class="container-fluid">
@@ -31,7 +52,7 @@
 
 			    <!-- Collect the nav links, forms, and other content for toggling -->
 			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			      <ul class="nav navbar-nav navbar-right" role="tablist">
+			      <ul class="nav navbar-nav nav-tabs navbar-right" role="tablist">
 				    <li><a href="#Home">Список</a></li>
 			        <li><a href="#countdowns">Сроки</a></li>
 			        <li><a href="#todays-classes">Расписание</a></li>
@@ -46,7 +67,8 @@
 			          </ul>
 			        </li>
 			        <li>
-			        	<button type="button" class="btn btn-default navbar-btn">Sign In</button>
+			        	<!-- Button trigger modal -->
+			        	<button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModal">Sign In</button>
 			        	<button type="button" class="btn btn-default navbar-btn">Log In</button>
 			        	<!-- <button type="button" class="btn btn-default navbar-btn">Mabina </button> -->
 			        </li>
