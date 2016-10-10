@@ -67,10 +67,21 @@
 			          </ul>
 			        </li>
 			        <li>
-			        	<!-- Button trigger modal -->
-			        	<button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModal">Sign In</button>
-			        	<button type="button" class="btn btn-default navbar-btn">Log In</button>
-			        	<!-- <button type="button" class="btn btn-default navbar-btn">Mabina </button> -->
+			        	<span id="auth-status">
+			        		<span id="not-inside">
+				        		<!-- Button trigger modal -->
+								<button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModal">Sign In</button>
+								<button type="button" class="btn btn-default navbar-btn">Log In</button>
+								<!-- <button type="button" class="btn btn-default navbar-btn">Mabina </button> -->
+			        		</span>
+			        		<span id="inside-app" style="display: none;">
+								<a id="prof-pic">
+									<img src="logo.jpg">
+								</a>
+								<p>Mabina</p>
+								<button type="button" class="btn btn-default navbar-btn">Log Out</button>
+			        		</span>
+			        	</span>
 			        </li>
 			      </ul>
 				</div>

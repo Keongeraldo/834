@@ -128,9 +128,9 @@ $(document).ready(function(){
 
 
   //Put the current year on the copyright at the bottom of the page.
-      $('.cprt-year #current-year').text(d.getFullYear());
+  $('.cprt-year #current-year').text(d.getFullYear());
 
-// The flip clock plugin for an awesome countdown timer.
+  // The flip clock plugin for an awesome countdown timer.
      var clocks = [];
 
       // Grab the current date
@@ -162,9 +162,16 @@ $(document).ready(function(){
         clock1.setTime(220880);
         clock1.setCountdown(true);
         clock1.start();
-        clocks.push(clock1)
+        clocks.push(clock1);
 
+
+  // Auth procedures
+  $('#auth-status').on('click', function(){
+    $('span#not-inside').toggle();
+    $('span#inside-app').toggle();
+  });
 
 });
+
 
 
