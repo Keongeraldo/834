@@ -221,3 +221,11 @@ function onyeshamabina (profile) {
   document.getElementById('avatar').src = profile.picture;
   document.getElementById('namemabina').textContent = titleCase(profile.name);
 }
+
+function showClassInput() {
+  $('#mabina-class-input').show();
+}
+
+function removeClassInput() {
+  $('#mabina-class-input').hide();
+}

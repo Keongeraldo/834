@@ -65,6 +65,7 @@ window.addEventListener('load', function() {
         localStorage.setItem('profile', JSON.stringify(profile));
         // showUserProfile(profile);
         onyeshamabina(profile);
+        showClassInput();
       }
     });
   });
@@ -75,6 +76,7 @@ window.addEventListener('load', function() {
       var user_profile = JSON.parse(localStorage.getItem('profile'));
       // showUserProfile(user_profile);
       onyeshamabina(user_profile);
+      showClassInput();
     } // else: not authorized
   };
 
@@ -99,6 +101,7 @@ window.addEventListener('load', function() {
   var logout = function() {
     localStorage.removeItem('id_token');
     localStorage.removeItem('profile');
+    removeClassInput();
     window.location.href = "/wiki/";
   };
 
