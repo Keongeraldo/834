@@ -12,15 +12,47 @@
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.standalone.css">
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
-	<body>
-		<header>
-			<nav class="navbar navbar-default">
+	<body style="padding-top: 70px;">
+		<header id="thenav">
+			<nav class="navbar navbar-default navbar-fixed-top">
 			  <div class="container-fluid">
+			    <!-- Brand and toggle get grouped for better mobile display -->
 			    <div class="navbar-header logo">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
 			      <a class="navbar-brand" href="https://vk.com/club58832439">
-			        <img alt="Brand" src="logo.jpg" title="Go to the VK page!">
-			      </a>
+						<img alt="Brand" src="logo.jpg" title="Go to the VK page!">
+				  </a>
 			    </div>
+
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav navbar-right" role="tablist">
+				    <li><a href="../wiki#Home">Список</a></li>
+			        <li><a href="../wiki#countdowns">Сроки</a></li>
+			        <li><a href="../wiki#todays-classes">Расписание</a></li>
+			        
+			        <!-- <li>
+			        	<span id="auth-status">
+			        		<span id="not-inside">
+				        		<button type="button" class="btn btn-default navbar-btn" id="mabinamakubwa">Sign In</button>
+				        		<button type="button" class="btn btn-default navbar-btn" id="mabinamadogo">Log In</button>
+			        		</span>
+			        		<span id="inside-app" style="display: none;">
+								<a id="prof-pic">
+									<img src="logo.jpg" id="avatar">
+								</a>
+								<p id="namemabina">Mabina</p>
+								<button type="button" class="btn btn-default navbar-btn" id="toamabina">Log Out</button>
+			        		</span>
+			        	</span>
+			        </li> -->
+			      </ul>
+				</div>
 			  </div>
 			</nav>
 		</header>
