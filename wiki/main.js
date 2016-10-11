@@ -128,9 +128,9 @@ $(document).ready(function(){
 
 
   //Put the current year on the copyright at the bottom of the page.
-      $('.cprt-year #current-year').text(d.getFullYear());
+  $('.cprt-year #current-year').text(d.getFullYear());
 
-// The flip clock plugin for an awesome countdown timer.
+  // The flip clock plugin for an awesome countdown timer.
      var clocks = [];
 
       // Grab the current date
@@ -162,9 +162,20 @@ $(document).ready(function(){
         clock1.setTime(220880);
         clock1.setCountdown(true);
         clock1.start();
-        clocks.push(clock1)
-
+        clocks.push(clock1);
 
 });
 
 
+
+// Mabina Auth procedures
+function onyeshamabina (profile) {
+  $('span#not-inside').hide();
+  $('span#inside-app').show();
+
+  function titleCase(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+  document.getElementById('avatar').src = profile.picture;
+  document.getElementById('namemabina').textContent = titleCase(profile.name);
+}
