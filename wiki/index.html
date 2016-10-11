@@ -12,6 +12,27 @@
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="stylesheet" href="FlipClock/compiled/flipclock.css">
+
+		<style type="text/css">
+			.tab-pane .form-group {
+			    margin: 4px 0 6px 0;
+			}
+			#submit-form-bottom {
+			    margin-top: 18px;
+			}
+			.mabina-multiple {
+			    padding: 10px;
+			    padding-bottom: 0;
+			    border-radius: 4px;
+			}
+			div.panel-heading {
+				padding: 0;
+			}
+			div.panel-heading a{
+				padding: 10px 15px;
+				display: block;
+			}
+		</style>
 	</head>
 	<body style="position: relative; padding-top: 70px;" data-spy="scroll" data-target="#bs-example-navbar-collapse-1">
 		<!-- Modal content-->
@@ -23,11 +44,135 @@
 		        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
 		      </div>
 		      <div class="modal-body">
-		        ...
+
+				<form class="form-horizontal" style="padding: 0 10px;" accept-charset="UTF-8" id="fillthesheet">
+				  <div class="form-group">
+				    <label for="inputEmail3" class="col-sm-2 control-label">Subject Name</label>
+				    <div class="col-sm-10">
+				      <select class="form-control" name="Subject" id="Subject">
+					      <option>Авиационный Английский </option>
+						  <option>БЖД</option>
+						  <option>БИУС </option>
+						  <option>Методы Современных Диагностики </option>
+						  <option>Конструкция и Прочность ВС </option>
+						  <option>Конструкция и Прочность АД </option>
+						  <option>Теория Надежности </option>
+						  <option>Теория АД </option>
+						  <option>Физ-Культура </option>
+						</select>
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <label for="ClassNo" class="col-sm-2 control-label">Class No.</label>
+				    <div class="col-sm-10">
+				      <input type="number" class="form-control" id="ClassNo" placeholder="Class No." min="0" max="100" step="1" name="Class Number">
+				    </div>
+				  </div>
+
+				  <!-- Tab area for multiple input types Style4 -->
+				  	<div class="form-group" style="margin-bottom: 0">
+					<div class="col-md-12 col-sm-12 mabina-multiple">
+						<div class="col-sm-2">
+							<label>Select a file a type</label>
+						</div>
+
+						<div class="col-sm-10">
+							<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+							  <div class="panel panel-default">
+							    <div class="panel-heading" role="tab" id="headingOne">
+							      <h4 class="panel-title">
+							        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+							          Link for DOC
+							        </a>
+							      </h4>
+							    </div>
+							    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+							      <div class="panel-body">
+							        <input type="text" class="form-control" id="DOCFileInput" placeholder="http://url-to-the-file" name="Link DOC">
+							      </div>
+							    </div>
+							  </div>
+
+							  <div class="panel panel-default">
+							    <div class="panel-heading" role="tab" id="headingTwo">
+							      <h4 class="panel-title">
+							        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							          Link for MD
+							        </a>
+							      </h4>
+							    </div>
+							    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+							      <div class="panel-body">
+							        <input type="text" class="form-control" id="MDFileInput" placeholder="http://url-to-the-file" name="Link MD">
+							      </div>
+							    </div>
+							  </div>
+
+							  <div class="panel panel-default">
+							    <div class="panel-heading" role="tab" id="headingThree">
+							      <h4 class="panel-title">
+							        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+							          Link for PDF
+							        </a>
+							      </h4>
+							    </div>
+							    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+							      <div class="panel-body">
+							        <input type="text" class="form-control" id="PDFFileInput" placeholder="http://url-to-the-file" name="Link PDF">
+							      </div>
+							    </div>
+							  </div>
+
+							  <div class="panel panel-default">
+							    <div class="panel-heading" role="tab" id="headingFour">
+							      <h4 class="panel-title">
+							        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+							          Link for AUDIO
+							        </a>
+							      </h4>
+							    </div>
+							    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+							      <div class="panel-body">
+							        <input type="text" class="form-control" id="AUDIOFileInput" placeholder="http://url-to-the-file" name="Link AUDIO">
+							      </div>
+							    </div>
+							  </div>
+
+							  <div class="panel panel-default">
+							    <div class="panel-heading" role="tab" id="headingFive">
+							      <h4 class="panel-title">
+							        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+							          Link for VIDEO
+							        </a>
+						          </h4>
+							    </div>
+							    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+							      <div class="panel-body">
+							        <input type="text" class="form-control" id="VIDEOFileInput" placeholder="http://url-to-the-file" name="Link VIDEO">
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						</div>
+					</div>
+					</div>
+
+				  	<div class="form-group" style="margin-bottom: 0">
+				  		
+				  	</div>
+				</form>
+				<div>
+					<p id="confirming" class="bg-success" style="display: none;">Form has been successfully submitted!</p>
+				</div>
+				<div>
+					<p id="remorse" class="bg-danger" style="display: none;">There was an issue while sending the form :( !</p>
+				</div>
+
 		      </div>
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		        <button type="button" class="btn btn-primary">Save changes</button>
+		        <button type="submit" class="btn btn-primary" id="modal-classinput-submit">Submit the Note</button>
 		      </div>
 		    </div>
 		  </div>
@@ -68,6 +213,13 @@
 			            <!-- <li><a href="#">Action</a></li>
 			            <li><a href="#">Another action</a></li> -->
 			            <li><a href="../ClassInput">Class Input</a></li>
+
+
+			            <li>
+							<!-- Button trigger modal -->
+							<button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#myModal">Model Popup</button>
+						</li>
+
 			            <li role="separator" class="divider"></li>
 			            <li><a href="../timetable">Full Timetable</a></li>
 			          </ul>

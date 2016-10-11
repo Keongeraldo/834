@@ -164,6 +164,48 @@ $(document).ready(function(){
         clock1.start();
         clocks.push(clock1);
 
+
+
+  //Form submission of classes VALIDATION
+  $('#modal-classinput-submit').on('click', function(){
+    $("#fillthesheet").trigger("submit");
+  });
+
+  $( "#fillthesheet" ).submit(function( event ) {
+    event.preventDefault();
+    
+    var showConfirmation = function (data){
+      $('#confirming').fadeIn(320).delay(400).fadeOut(400);
+      $("#fillthesheet").trigger('reset')
+    }
+
+    var showRemorse = function (data){
+      $('#remorse').fadeIn(320).delay(400).fadeOut(300);
+    }
+
+    var scriptUrl = "https://script.google.com/macros/s/AKfycbwPgBS7SbZZMlj2IVps_eXlPM1YDJkOKqUfsii7GPC1SgzIZ_Q/exec";
+    scriptUrl += '?' + $.param({
+      'Subject': $('#Subject').val(),
+      'Class Number': $('#ClassNo').val(),
+      'Date': new Date(),
+      'Uploader': Math.floor(Math.random() * 17),   //Change this later
+      'Link DOC': $('#DOCFileInput').val(),
+      'Link MD': $('#MDFileInput').val(),
+      'Link PDF': $('#PDFFileInput').val(),
+      'Link AUDIO': $('#AudioFileInput').val(),
+      'Link VIDEO': $('#VideoFileInput').val()
+    });
+    
+    $.ajax({
+      crossDomain: true,
+      url: scriptUrl,
+      method: "POST",
+      dataType: "jsonp",
+      success: showConfirmation,
+      error: showRemorse
+    });
+  });
+
 });
 
 
