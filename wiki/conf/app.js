@@ -13,38 +13,42 @@ window.addEventListener('load', function() {
     }]
   });
 
-  document.getElementById('btn-login').addEventListener('click', function() {
+  document.getElementById('mabinamakubwa').addEventListener('click', function() {
     lock.show();
   });
 
-  document.getElementById('btn-edit').addEventListener('click', function() {
-    document.getElementById('edit_profile').style.display = "block";
-    document.getElementById('login').style.display = "none";
-    document.getElementById('logged').style.display = "none";
+  document.getElementById('mabinamadogo').addEventListener('click', function() {
+    lock.show();
   });
 
-  document.getElementById('btn-edit-submit').addEventListener('click', function() {
-    var user_address = document.getElementById('edit_address').value;
-    var url = 'https://' + AUTH0_DOMAIN + '/api/v2/users/' + user_id;
-    var data = JSON.stringify({ user_metadata: {address: user_address} });
-    var xhr = new XMLHttpRequest();
-    xhr.open('PATCH', url);
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.setRequestHeader('Accept', 'application/json');
-    xhr.setRequestHeader('Authorization',
-                         'Bearer ' + localStorage.getItem('id_token'));
-    xhr.onload = function() {
-      if (xhr.status == 200) {
-        localStorage.setItem('profile', xhr.responseText);
-        showUserProfile(JSON.parse(xhr.responseText));
-      } else {
-        alert("Request failed: " + xhr.statusText);
-      }
-    };
-    xhr.send(data);
-  });
+  // document.getElementById('btn-edit').addEventListener('click', function() {
+  //   document.getElementById('edit_profile').style.display = "block";
+  //   document.getElementById('login').style.display = "none";
+  //   document.getElementById('logged').style.display = "none";
+  // });
 
-  document.getElementById('btn-logout').addEventListener('click', function() {
+  // document.getElementById('btn-edit-submit').addEventListener('click', function() {
+  //   var user_address = document.getElementById('edit_address').value;
+  //   var url = 'https://' + AUTH0_DOMAIN + '/api/v2/users/' + user_id;
+  //   var data = JSON.stringify({ user_metadata: {address: user_address} });
+  //   var xhr = new XMLHttpRequest();
+  //   xhr.open('PATCH', url);
+  //   xhr.setRequestHeader('Content-Type', 'application/json');
+  //   xhr.setRequestHeader('Accept', 'application/json');
+  //   xhr.setRequestHeader('Authorization',
+  //                        'Bearer ' + localStorage.getItem('id_token'));
+  //   xhr.onload = function() {
+  //     if (xhr.status == 200) {
+  //       localStorage.setItem('profile', xhr.responseText);
+  //       showUserProfile(JSON.parse(xhr.responseText));
+  //     } else {
+  //       alert("Request failed: " + xhr.statusText);
+  //     }
+  //   };
+  //   xhr.send(data);
+  // });
+
+  document.getElementById('toamabina').addEventListener('click', function() {
     logout();
   });
 
@@ -59,7 +63,8 @@ window.addEventListener('load', function() {
       } else {
         localStorage.setItem('id_token', authResult.idToken);
         localStorage.setItem('profile', JSON.stringify(profile));
-       showUserProfile(profile);
+        // showUserProfile(profile);
+        onyeshamabina(profile);
       }
     });
   });
@@ -68,7 +73,8 @@ window.addEventListener('load', function() {
     var id_token = localStorage.getItem('id_token');
     if (null != id_token) {
       var user_profile = JSON.parse(localStorage.getItem('profile'));
-      showUserProfile(user_profile);
+      // showUserProfile(user_profile);
+      onyeshamabina(profile);
     } // else: not authorized
   };
 
@@ -93,7 +99,7 @@ window.addEventListener('load', function() {
   var logout = function() {
     localStorage.removeItem('id_token');
     localStorage.removeItem('profile');
-    window.location.href = "/";
+    window.location.href = "/wiki/";
   };
 
   parseHash();

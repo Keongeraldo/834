@@ -164,14 +164,18 @@ $(document).ready(function(){
         clock1.start();
         clocks.push(clock1);
 
-
-  // Auth procedures
-  $('#auth-status').on('click', function(){
-    $('span#not-inside').toggle();
-    $('span#inside-app').toggle();
-  });
-
 });
 
 
 
+// Mabina Auth procedures
+function onyeshamabina (profile) {
+  $('span#not-inside').hide();
+  $('span#inside-app').show();
+
+  function titleCase(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+  document.getElementById('avatar').src = profile.picture;
+  document.getElementById('namemabina').textContent = titleCase(profile.name);
+}
