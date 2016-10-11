@@ -74,7 +74,7 @@ window.addEventListener('load', function() {
     if (null != id_token) {
       var user_profile = JSON.parse(localStorage.getItem('profile'));
       // showUserProfile(user_profile);
-      onyeshamabina(profile);
+      onyeshamabina(user_profile);
     } // else: not authorized
   };
 
