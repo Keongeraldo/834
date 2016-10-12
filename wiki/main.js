@@ -1,10 +1,13 @@
-$('.grid').masonry({
+var $grid = $('.grid').masonry({
   itemSelector: '.grid-item',
   columnWidth: 300,
   stagger: 30,
   gutter: 8,
   isFitWidth: true
 });
+
+$('.subject-meta').hide();
+$grid.masonry()
 
 
 Date.prototype.getWeek = function () {
@@ -224,8 +227,12 @@ function onyeshamabina (profile) {
 
 function showClassInput() {
   $('#mabina-class-input').show();
+  $('.subject-meta').show();
+  $grid.masonry();
 }
 
 function removeClassInput() {
   $('#mabina-class-input').hide();
+  $('.subject-meta').hide();
+  $grid.masonry();
 }
