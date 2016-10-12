@@ -2,25 +2,27 @@ window.addEventListener('load', function() {
   var user_id = null;
 
   var lock = new Auth0Lock(AUTH0_CLIENT_ID, AUTH0_DOMAIN, {
-    additionalSignUpFields: [{
-      name: "address",                              // required
-      placeholder: "Enter your address",            // required
-      icon: "./address_icon.png",                   // optional
-      validator: function(value) {                  // optional
-        // only accept addresses with more than 10 characters
-        return value.length > 10;
-      }
-    }]
+    redirect: false,
+    popupOptions: { width: 300, height: 400, left: 200, top: 300 },
+    theme: {
+      logo: 'logo.jpg',
+      primaryColor: '#31F24F'
+    },
+    allowedConnections: ['github', 'vkontakte'],
+    socialButtonStyle: 'big',
+    container: 'hiw-login-container',
+    closable: true
   });
 
-  document.getElementById('mabinamakubwa').addEventListener('click', function() {
-    lock.show();
-  });
+  // document.getElementById('mabinamakubwa').addEventListener('click', function() {
+  //   lock.show();
+  // });
 
-  document.getElementById('mabinamadogo').addEventListener('click', function() {
-    lock.show();
-  });
+  // document.getElementById('myModalauth').addEventListener('click', function() {
+  //   lock.show();
+  // });
 
+  lock.show();
   // document.getElementById('btn-edit').addEventListener('click', function() {
   //   document.getElementById('edit_profile').style.display = "block";
   //   document.getElementById('login').style.display = "none";
