@@ -102,7 +102,7 @@ window.addEventListener('load', function() {
     localStorage.removeItem('id_token');
     localStorage.removeItem('profile');
     removeClassInput();
-    window.location.href = "/wiki/";
+    window.location.href = "/834/wiki/";
   };
 
   parseHash();
